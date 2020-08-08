@@ -48,14 +48,14 @@ Upon running the script, a window like the one below will appear, where the user
 
 The parameters are:
 
-- **Mode**: .
-- **Filter**: choice of filter.
-- **Formants range**: define lower and upper band to be used by the band pass filter.
-- **Smoothing frequency**: beat wave smoothing frequency
-- **Threshold**: a maximum or minimum in the beat wave derivative will be considered an onset or offset if it has at least this value.
-- **Boundaries**: defines if onsets, offsets or both will be detected.
-- **Mininum duration**: onset of offset events have to be at least this amount of time apart to be set in the output TextGrid.
-- **Save results**: if selected, script output (TextGrid and beatwave sound file) will be saved to the same folder where the script is run from.
+- **Mode**: Choose if the script will run on a single file or on all WAV files within a folder.
+- **Filter**: Choose between Butterwoth of Hann filters.
+- **Formants range**: Define lower and upper band to be used by the band pass filter.
+- **Smoothing frequency**: Cutoff frequency for the low pass filter that will generate the beat wave.
+- **Threshold**: A maximum or minimum in the beat wave derivative will be considered an onset or offset if it has at least this value.
+- **Boundaries**: Defines if onsets, offsets or both will be detected.
+- **Mininum duration**: Onset of offset events have to be at least this amount of time apart to be set in the output TextGrid.
+- **Save results**: If selected, script output (TextGrid and beat wave sound file) will be saved to the same folder where the script is run from.
 
 ## Comments
 

@@ -1,5 +1,7 @@
 # vowel-detector
 
+[![DOI](https://zenodo.org/badge/286106076.svg)](https://zenodo.org/badge/latestdoi/286106076)
+
 Praat script to find onsets and offsets of vowel-like segments in a sound file based on its energy profile. 
 
 Cummins (1998) describes a procedure based on Scott (1993) to identify what he calls syllabic beats, or the time points in the speech chain where listeners seem to anchor the perception of the succession of vowel sounds, an idea that can be likened to the concept of p-centers. Research has established that these beats are highly associated with the onset of vowel sounds.
@@ -65,7 +67,9 @@ Script file and user files don't need to be in the same file directory.
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations.
 
-## Cite as
+## How to cite
+
+Click on the DOI badge above to see instructions on how to cite the script.
 
 ## References
 

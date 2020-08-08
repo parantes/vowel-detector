@@ -1,4 +1,4 @@
-# vowel-detector.praat
+# vowel-detector
 
 Praat script to find onsets and offsets of vowel-like segments in a sound file based on its energy profile. 
 
@@ -38,19 +38,19 @@ The script generates two objects:
 
 Selecting both objects and pressing the `View & Edit` button on the dynamic menu the user will see something like the following figure ("V" labels were added manually to better show the vowel regions detected by the script). 
 
-![Script GUI](figs/script-gui.png)
+![Script GUI](figs/example.png)
 
 ## Parameters
 
 Upon running the script, a window like the one below will appear, where the user has to set a number of parameters.
 
-![Script GUI](figs/example.png)
+![Script GUI](figs/script-gui.png)
 
 The parameters are:
 
 - **Mode**: .
 - **Filter**: choice of filter.
-- ****: define lower and upper band to be used in the band-pass filter.
+- **Formants range**: define lower and upper band to be used by the band pass filter.
 - **Smoothing frequency**: beat wave smoothing frequency
 - **Threshold**: a maximum or minimum in the beat wave derivative will be considered an onset or offset if it has at least this value.
 - **Boundaries**: defines if onsets, offsets or both will be detected.

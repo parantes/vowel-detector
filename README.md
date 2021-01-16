@@ -4,7 +4,7 @@
 
 Praat script to find onsets and offsets of vowel-like segments in a sound file based on its energy profile. 
 
-Cummins (1998) describes a procedure based on Scott (1993) to identify what he calls syllabic beats, or the time points in the speech chain where listeners seem to anchor the perception of the succession of vowel sounds, an idea that can be likened to the concept of p-centers. Research has established that these beats are highly associated with the onset of vowel sounds.
+Cummins (1998) describes a procedure based on Scott (1993) to identify what he calls syllabic beats, or the time points in the speech chain where listeners seem to anchor the perception of the succession of vowel sounds, an idea that can be likened to the concept of _P_-centers. Research has established that these beats are highly associated with the onset of vowel sounds.
 
 The procedure outlined by Cummins consists of the following steps:
 
@@ -16,9 +16,9 @@ The procedure outlined by Cummins consists of the following steps:
 
 4. A local rise in the beat wave is considered a beat and the location is defined to be at the point midway between 10% and 90% of the total rise amplitude.  
 
-Cummins hasn't made his code publicly available. Barbosa shares his Praat implementation called [BeatExtractor](https://github.com/pabarbosa/prosody-scripts). Barbosa introduced an alternative criterion to define beat location: beat location was defined by taking the first derivative of the beat wave and finding the local maxima in it. This option was added alongside Cummins original amplitude criterion.
+Cummins hasn't made his code publicly available. Barbosa shares his Praat implementation called [BeatExtractor](https://github.com/pabarbosa/prosody-scripts). In Barbosa's implementation, a beat is defined as the value that reaches a set amplitude threshold within the rising parts of the beat wave. Barbosa also introduced an alternative criterion to define beat location: beats are the points of local maxima on the beat wave' first derivative. This option was added alongside Cummins original amplitude criterion to Barbosa's implementation.
 
-The present script is a complete rewrite of Barbosa's script. The main difference is that our implementation only offers the beat wave derivative criterion and identifies vowel offsets as well as onsets. Offsets are defined as the local minima in the beat wave derivative contour. Also, we mostly use Praat's own built-in functions to make the code a little faster and more readable and concise.
+The present script is a complete rewrite of Barbosa's script. The main difference is that our implementation identifies vowel offsets as well as onsets. Offsets are defined either as the local minima in the beat wave derivative contour (derivative criterion) or the points in the falling beatwave sections that meet a set amplitude threshold (amplitude criterion). Also, we mostly use Praat's own built-in functions to make the code more concise, a little faster and more readable.
 
 ## Purpose
 
@@ -54,6 +54,7 @@ The parameters are:
 - **Filter**: Choose between Butterwoth of Hann filters.
 - **Formants range**: Define lower and upper band to be used by the band pass filter.
 - **Smoothing frequency**: Cutoff frequency for the low pass filter that will generate the beat wave.
+- **Technique**: Choice between two criteria to find onsets and offsets on the beat wave.
 - **Threshold**: A maximum or minimum in the beat wave derivative will be considered an onset or offset if it has at least this value.
 - **Boundaries**: Defines if onsets, offsets or both will be detected.
 - **Mininum duration**: Onset of offset events have to be at least this amount of time apart to be set in the output TextGrid.

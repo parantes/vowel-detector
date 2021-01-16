@@ -7,3 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.0] - 2014-04-11
 ### Added
 - Script created.
+
+## [2.0] - 2021-01-16
+### Added
+- Amplitude technique added to have feature parity with the original BeatExtractor script.
+- File extension for audio files can be specified in the script GUI.
+
+### Changed
+- Better comments all around.
+- Better encapsulation of the main detection procedure.
+- Make use of a new function provided by Praat version 6.1.38 to list files in a directory.

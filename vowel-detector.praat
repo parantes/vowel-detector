@@ -144,7 +144,7 @@ elsif mode = 2
 	soundFiles$# = fileNames$#(sound_files$ + "*" + sound_extension$)
 	nfiles = size(soundFiles$#)
 	for file to nfiles
-		audio = Read from file: soundFiles$#[file]
+		audio = Read from file: sound_files$ + soundFiles$#[file]
 		audio$ = selected$("Sound")
 		@detect: audio, filter, f_min, f_max, f_smooth, technique, threshold, boundaries, mindur
 
